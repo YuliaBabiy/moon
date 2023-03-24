@@ -1,0 +1,132 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/maps";
+
+@import "~bootstrap/scss/utilities";
+@import "~bootstrap/scss/helpers";
+@import "~bootstrap/scss/transitions";
+
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/nav";
+@import "~bootstrap/scss/navbar";
+
+@import "./nullstyle.scss";
+@import "./title.scss";
+@import "./sections.scss";
+
+@font-face {
+  font-family: Lato;
+  src: url("../../public/Lato-Light.woff") format('woff');
+}
+
+@font-face {
+  font-family: WorkSans;
+  src: url("../../public/WorkSans-Light.woff") format('woff');
+}
+
+@font-face {
+  font-family: WorkSansRegular;
+  src: url("../../public/WorkSans-Regular.woff") format('woff');
+}
+
+@font-face {
+  font-family: WorkSansBold;
+  src: url("../../public/WorkSans-SemiBold.woff") format('woff');
+}
+
+%title-h1 {
+  font-family: WorkSans;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+%title-fs-24 {
+  font-size: 24px;
+  font-family: WorkSansRegular;
+}
+
+body {
+  background-image: url(../img/bg.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Lato;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5em;
+  text-align: center;
+  
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: .8;
+    z-index: -1;
+    position: fixed;
+    background: linear-gradient(to right, #f5af19, #f12711);
+  }
+}
+
+.flex-centr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main {
+  margin: 50px auto;
+  border-radius: 5px;
+  max-width: 1024px;
+  width: calc(100% - 26px);
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.11), 0 5px 15px 0 rgba(0, 0, 0, 0.08);
+}
+
+.wrapper {
+  padding: 80px 30px;
+}
+
+
+.header {
+  &__logo {
+    height: 50px;
+    width: 50px;
+  }
+  &__nav {
+    justify-content: flex-end;
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 1024px;
+  width: calc(100% - 26px);
+  background-color: #fff;
+  z-index: 10;
+}
+
+.title-img {
+  margin-top: -66px; // height of a header
+  background-image: url(../img/hero-2.jpg);
+  background-size: cover;
+  background-position: 50% 50%;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  & .title {
+    margin-top: 0;
+    font-size: 55px;
+  }
+}
